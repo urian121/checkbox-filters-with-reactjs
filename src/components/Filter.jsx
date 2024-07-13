@@ -1,4 +1,8 @@
 import { useState } from "react";
+
+import { showLoading, hideLoading } from "loading-request";
+import "loading-request/dist/index.css";
+
 import ApiProductos from "./ApiProducts";
 
 const Filter = () => {
@@ -12,12 +16,20 @@ const Filter = () => {
   const [selectedCategories, setSelectedCategories] = useState([]);
 
   const handleCategoryChange = (categoryValue) => {
+    showLoading({
+      message: "Cargando Filtro...",
+      spinnerColor: "#f3752b",
+      textLoadingColor: "#EE5E09",
+      textLoadingSize: "35px",
+    });
+
     // Toggle selected categories
     if (selectedCategories.includes(categoryValue)) {
       setSelectedCategories(selectedCategories.filter((cat) => cat !== categoryValue));
     } else {
       setSelectedCategories([...selectedCategories, categoryValue]);
     }
+    hideLoading({ timeLoading: 1000 });
   };
 
   return (
