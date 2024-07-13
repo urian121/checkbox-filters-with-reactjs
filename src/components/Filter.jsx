@@ -1,36 +1,32 @@
 import ApiProductos from "./ApiProductos";
 
 const Filter = () => {
+  const categories = [
+    { value: "electronics", label: "Electrónica" },
+    { value: "jewelery", label: "Joyería" },
+    { value: "men's clothing", label: "Ropa de Hombre" },
+    { value: "women's clothing", label: "Ropa de Mujer" },
+  ];
   return (
     <div id="container">
       <div id="filter">
-        <h3>
-          Filtro Dinámico <hr />
-        </h3>
+        <h2>
+          Lista de Categoria <hr />
+        </h2>
 
         <div className="category-filters">
           <div id="color-filters">
             <ul className="filter-options filter-option_1">
-              <li>
-                <input type="checkbox" value="electronics" /> Electrónica
-              </li>
-              <li>
-                <input type="checkbox" value="jewelery" /> Joyería
-              </li>
-              <li>
-                <input type="checkbox" value="men's clothing" /> Ropa de Hombre
-              </li>
-              <li>
-                <input type="checkbox" value="women's clothing" /> Ropa de mujer
-              </li>
+              {categories.map((category) => (
+                <li key={category.value}>
+                  <input type="checkbox" value={category.value} /> {category.label}
+                </li>
+              ))}
             </ul>
           </div>
         </div>
       </div>
-
-      <div id="products">
-        <ApiProductos />
-      </div>
+      <ApiProductos />
     </div>
   );
 };
