@@ -34,7 +34,37 @@ body li {
   margin: 0;
   list-style-type: none;
 }
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+ul li {
+  font-size: 20px;
+  font-weight: bold;
+}
+ul li:hover {
+  cursor: pointer;
+}
+#container {
+  display: flex;
+}
 
+#filter {
+  display: inline-block;
+  width: 800px;
+  padding: 0px 5px;
+}
+.contenedorCards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+#root {
+  margin: 0 auto;
+  padding: 3rem;
+}
 .card {
   width: 300px;
   transition: ease all 0.3s;
@@ -54,7 +84,7 @@ body li {
   transform: scale(0);
 }
 .card .wrapper {
-  margin: 60px 10px 10px 10px;
+  /*margin: 60px 10px 10px 10px; */
   padding-top: 300px;
   box-sizing: border-box;
   position: relative;
@@ -72,7 +102,7 @@ body li {
   left: 0;
   width: 100%;
   height: 200px;
-  background-color: #b82d44;
+  background-color: #ffffff;
 }
 .card .wrapper .imgProd {
   background-size: contain;
