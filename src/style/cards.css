@@ -54,7 +54,7 @@ ul li:hover {
 
 #filter {
   display: inline-block;
-  width: 800px;
+  min-width: 200px;
   padding: 0px 5px;
 }
 .contenedorCards {

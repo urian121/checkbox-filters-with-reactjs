@@ -1,4 +1,5 @@
-import ApiProducts from "./ApiProducts";
+import { useState } from "react";
+import ApiProductos from "./ApiProducts";
 
 const Filter = () => {
   const categories = [
@@ -7,11 +8,23 @@ const Filter = () => {
     { value: "men's clothing", label: "Ropa de Hombre" },
     { value: "women's clothing", label: "Ropa de Mujer" },
   ];
+
+  const [selectedCategories, setSelectedCategories] = useState([]);
+
+  const handleCategoryChange = (categoryValue) => {
+    // Toggle selected categories
+    if (selectedCategories.includes(categoryValue)) {
+      setSelectedCategories(selectedCategories.filter((cat) => cat !== categoryValue));
+    } else {
+      setSelectedCategories([...selectedCategories, categoryValue]);
+    }
+  };
+
   return (
     <div id="container">
       <div id="filter">
         <h2>
-          Lista de Categoria <hr />
+          Lista de Categoría <hr />
         </h2>
 
         <div className="category-filters">
@@ -19,14 +32,23 @@ const Filter = () => {
             <ul className="filter-options filter-option_1">
               {categories.map((category) => (
                 <li key={category.value}>
-                  <input type="checkbox" value={category.value} /> {category.label}
+                  <label htmlFor={category.value}>
+                    <input
+                      type="checkbox"
+                      id={category.value}
+                      value={category.value}
+                      checked={selectedCategories.includes(category.value)}
+                      onChange={() => handleCategoryChange(category.value)}
+                    />{" "}
+                    {category.label}
+                  </label>
                 </li>
               ))}
             </ul>
           </div>
         </div>
       </div>
-      <ApiProducts />
+      <ApiProductos selectedCategories={selectedCategories} />
     </div>
   );
 };

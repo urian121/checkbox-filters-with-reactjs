@@ -1,8 +1,21 @@
-# React + Vite
+# CheckBox Filters with React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+##### Este proyecto desarrollado en React incorpora filtros de checkbox para productos, permitiendo a los usuarios seleccionar una o varias categorías. Utiliza hooks como useState y useEffect para gestionar el estado y la interacción con una API externa, ofreciendo una experiencia interactiva y dinámica al filtrar productos según las preferencias del usuario.
 
-Currently, two official plugins are available:
+#### Para correr el proyecto, solo basta instalar las dependencias y correr el proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    npm install
+    npm run dev
+
+#### Resultado final
+
+![](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/filtro-producto-por-categorias-react.png)
+
+### Expresiones de Gratitud 🎁
+
+    Comenta a otros sobre este proyecto 📢
+    Invita una cerveza 🍺 o un café ☕
+    Paypal iamdeveloper86@gmail.com
+    Da las gracias públicamente 🤓.
+
+## No olvides SUSCRIBIRTE 👍
