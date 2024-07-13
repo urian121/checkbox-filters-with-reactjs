@@ -1,4 +1,4 @@
-import ApiProductos from "./ApiProductos";
+import ApiProducts from "./ApiProducts";
 
 const Filter = () => {
   const categories = [
@@ -26,7 +26,7 @@ const Filter = () => {
           </div>
         </div>
       </div>
-      <ApiProductos />
+      <ApiProducts />
     </div>
   );
 };

@@ -1,4 +1,5 @@
 const ProductCard = ({ product }) => {
+  const discountedPrice = product.price - product.price * 0.3;
   return (
     <div className="card">
       <div className="wrapper">
@@ -14,7 +15,7 @@ const ProductCard = ({ product }) => {
           <div className="actions">
             <div className="preciosGrupo">
               <p className="precio precioOferta">{product.price}</p>
-              <p className="precio precioProd">{product.price - product.price * 0.2}</p>
+              <p className="precio precioProd">{discountedPrice.toFixed(2)}</p>
             </div>
             <div className="icono action aFavs">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
