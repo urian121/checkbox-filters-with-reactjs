@@ -9,7 +9,7 @@
 
 #### Resultado final
 
-![](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/filtro-producto-por-categorias-react.png)
+![](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/checkbox-filters-with-reactjs-loading-request.gif)
 
 ### Expresiones de Gratitud 🎁
 
