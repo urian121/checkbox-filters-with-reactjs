@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 import { showLoading, hideLoading } from "loading-request";
-import "loading-request/dist/index.css";
 
 import ApiProductos from "./ApiProducts";
 
